@@ -21,6 +21,7 @@ client = discord.Client(intents=intents)
 # chatid = os.environ['CHATID']
 token = os.getenv("token")
 chatid = os.getenv("chatid")
+discord_token = os.getenv("discord_token")
 updater = Updater(
     token=token, use_context=True)
 dispatcher = updater.dispatcher
@@ -89,4 +90,4 @@ async def on_message(message):
             f"Hoy es {mostrarDia()}, por lo tanto no voy a enviar nada. ")
 
 client.run(
-    'MTA2NDMyMDA4MDU1NDUwNDI1Mg.G8pilY.8MMgRDUy3e8Z-mXVHewauKmEgU_l2Q3ybpp4pU')
+    discord_token)
